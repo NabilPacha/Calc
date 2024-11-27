@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MKDIR" content="author">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <title>Calc</title>
+</head>
+<body>
+    <div class="calculator">
+        <p class="mk">By MKDIR</p>
+       
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="input(7)">7</button>
+            <button class="btn" onclick="input(8)">8</button>
+            <button class="btn" onclick="input(9)">9</button>
+            <button class="btn operator" onclick ="input('/')">/</button>
+
+
+            <button class="btn" onclick="input(4)">4</button>
+            <button class="btn" onclick="input(5)">5</button>
+            <button class="btn" onclick="input(6)">6</button>
+            <button class="btn operator" onclick="input('*')">x</button>
+
+
+            <button class="btn" onclick="input(1)">1</button>
+            <button class="btn" onclick="input(2)">2</button>
+            <button class="btn" onclick="input(3)">3</button>
+            <button class="btn operator" onclick="input('-')">-</button>
+
+
+            <button class="btn" onclick="input(0)">0</button>
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn operator" onclick="calculate()">=</button>
+            <button class="btn operator" onclick="input('+')">+</button>
+
+
+        </div>
+    </div>
+<h4 class="name"><u>Sous la supervision de Daniel KINKEU</u></h4>
+<script src="scripts/script.ts"></script></body>
+</html>

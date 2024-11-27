@@ -1,0 +1,19 @@
+{
+    "name": "calc_project",
+    "version": "1.0.0",
+    "description": "création d'une calculatrice numérique",
+    "main": "index.html",
+    "scripts": {
+      "build": "tsc",
+      "watch": "tsc --watch",
+      "start": "live-server"
+    },
+    "keywords": [],
+    "author": "MKDIR Nab",
+    "license": "MIT",
+    "devDependencies": {
+      "typescript": "^5.0.0",
+      "live-server": "^1.2.1"
+    }
+  }
+  
