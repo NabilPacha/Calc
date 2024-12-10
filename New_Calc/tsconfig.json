@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "outDir": "./ts-build",
+      "target": "ES6",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true
+    },
+    "include": ["script/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  

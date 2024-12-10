@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Calculatrice Scientifique</title>
+</head>
+<body>
+    <div class="calculator" id="calculator">
+        <div class="header">
+            <div class="mini-display" id="clock">00:00:00</div>
+        </div>
+        <div class="display" id="display">0</div>
+        <div class="buttons" id="buttons">
+            <button class="btn" onclick="Calculator.input(7)">7</button>
+            <button class="btn" onclick="Calculator.input(8)">8</button>
+            <button class="btn" onclick="Calculator.input(9)">9</button>
+            <button class="btn operator" onclick="Calculator.input('/')">/</button>
+            <button class="btn" onclick="Calculator.input(4)">4</button>
+            <button class="btn" onclick="Calculator.input(5)">5</button>
+            <button class="btn" onclick="Calculator.input(6)">6</button>
+            <button class="btn operator" onclick="Calculator.input('*')">x</button>
+            <button class="btn" onclick="Calculator.input(1)">1</button>
+            <button class="btn" onclick="Calculator.input(2)">2</button>
+            <button class="btn" onclick="Calculator.input(3)">3</button>
+            <button class="btn operator" onclick="Calculator.input('-')">-</button>
+            <button class="btn" onclick="Calculator.input(0)">0</button>
+            <button class="btn" onclick="Calculator.clearDisplay()">C</button>
+            <button class="btn operator" onclick="Calculator.calculate()">=</button>
+            <button class="btn operator" onclick="Calculator.input('+')">+</button>
+            <button class="btn special" onclick="Calculator.toggleScientificMode()">Calc Scientifique</button>
+        </div>
+        <div class="scientific-buttons hidden" id="scientific-buttons">
+            <button class="btn" onclick="Calculator.power()">x<sup>y</sup></button>
+            <button class="btn" onclick="Calculator.factorial()">n!</button>
+            <button class="btn" onclick="Calculator.sqrt()">√x</button>
+            <button class="btn" onclick="Calculator.convertBase(2)">Bin</button>
+            <button class="btn" onclick="Calculator.convertBase(8)">Oct</button>
+            <button class="btn" onclick="Calculator.convertBase(16)">Hex</button>
+            <button class="btn" onclick="Calculator.exponential()">Exp</button>
+            <button class="btn" onclick="Calculator.logarithm()">Log</button>
+            <button class="btn" onclick="Calculator.trigonometry('cos')">Cos</button>
+            <button class="btn" onclick="Calculator.trigonometry('sin')">Sin</button>
+            <button class="btn" onclick="Calculator.trigonometry('tan')">Tan</button>
+            <button class="btn" onclick="Calculator.modulo()">%</button>
+            <button class="btn special" onclick="Calculator.toggleScientificMode()">Mode Normal</button>
+        </div>
+    </div>
+    <script src="ts-build/script.js"></script>
+</body>
+</html>

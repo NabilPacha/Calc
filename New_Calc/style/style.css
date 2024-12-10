@@ -1,0 +1,123 @@
+/* Style général */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #ff758c, #fbf0f44c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur de la calculatrice */
+.calculator {
+    background: #415679;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    width: 320px;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Affichage principal */
+.display {
+    background: #000;
+    color: rgba(255, 0, 187, 0.647);
+    border-radius: 8px;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Petit affichage pour l'horloge */
+.mini-display {
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Boutons de base */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Boutons scientifiques */
+.scientific-buttons {
+    position: absolute;
+    right: -9.5rem;
+    top: 0;
+    background: linear-gradient(to right, #000000, #434343);
+    border-radius: 15px;
+    padding: 15px;
+    display: none; /* Cacher par défaut */
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    max-height: calc(100vh - 30px);
+    z-index: 10;
+    opacity: 0; /* Initialement transparent */
+    transform: translateX(100%); /* Déplacé à droite */
+    transition: all 0.5s ease-in-out;
+}
+
+/* Animation lors de l'apparition */
+.scientific-buttons.visible {
+    display: grid;
+    opacity: 1; /* Rend visible */
+    transform: translateX(0); /* Ramène à sa position d'origine */
+}
+
+/* Style des boutons */
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+    /*background: linear-gradient(to right, #ff7f50, #ff4500);*/
+    background: linear-gradient(to bottom, #ff758c, #eb1765d0);
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right,#ffcc00, #ddff00);
+}
+
+/* Bouton spécial pour le mode scientifique */
+.special {
+    background: #ffcc00;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Animation personnalisée */
+@keyframes scientificButtonsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Légèrement au-dessus */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Position finale */
+    }
+}
+
+/* Appliquer l'animation */
+.scientific-buttons.visible {
+    animation: scientificButtonsFadeIn 0.5s ease-in-out;
+}
